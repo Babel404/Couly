@@ -1,0 +1,113 @@
+***** PARTIE SERVEUR *****
+
+***** UserService *****
+
+	public static JSONArray digest(String key) {
+		MongoCollection<Document> collection = Database.getMongoDB().getCollection("comments");
+		try {
+			Connection conn = Database.getMySQLConnection();
+			int user_id=ServiceTools.getIdFromConnexion(key);
+			String query = "SELECT mail FROM login_table WHERE user_id = " + user_id + ";";
+			Statement instruction = conn.createStatement();
+			ResultSet rs = instruction.executeQuery(query);
+			String mail = rs.getString(0);
+			rs.close();
+			Document query2 = new Document();
+			JSONArray res = new JSONArray();
+			query2.append("author_id", ServiceTools.getIdFromConnexion(key));
+			res=UserService.search4(key, query2);
+			
+			//Envoyer les commentaires stockés dans res au mail récupéré.
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new JSONArray();
+
+	}
+
+***** Servlet *****
+
+public class Digest extends HttpServlet {
+	 private static final long serialVersionUID = 1;
+	 
+	 public Digest() {}
+	 
+	 /*
+	 * This method will handle all GET request.
+	 */
+	 protected void doGet(HttpServletRequest request,
+	 HttpServletResponse response) throws ServletException, IOException {
+		
+			String key = request.getParameter("key");
+			Document query = new Document();
+			
+			//String password = request.getParameter("pass");
+			
+			JSONArray res = null;
+			try {
+				
+				if (key != null) 
+						res = UserService.digest(key);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			if (res == null) {
+				res = new JSONArray();
+				res.put("erreur");
+			}
+		
+		response.setCharacterEncoding("UTF-8");
+	 	response.setContentType("application/json" );
+		PrintWriter out = response.getWriter ();
+		out.println(res);
+	 }
+	 
+}
+ 
+
+***** Mapping *****
+
+		<servlet>
+		<servlet-name>Digest</servlet-name>
+		<servlet-class>Digest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Digest</servlet-name>
+		<url-pattern>/digest</url-pattern>
+	</servlet-mapping>
+
+
+***** PARTIE CLIENT *****
+
+***** Dans Content.js *****
+
+	digest(user_key){
+		axios.get("http://localhost:8080/project4/digest?key=" + user_key).then(rep => {}).catch(error => {console.log(error)});
+	}
+
+***** Dans le render de Content.js *****
+
+//Mettre en place le boutton pour lancer la fonction digest
+
+***** Dans le render de NavigationPannel.js *****
+
+	<Content
+            user={this.props.user}
+            page={this.state.page}
+            viewPage={this.viewPage}
+
+            requestedProfile={this.state.requestedProfile}
+            userProfile={this.state.userProfile}
+            requestProfile={this.requestProfile}
+            
+            follow={this.follow}
+            unfollow={this.unfollow}
+
+            displayMain={this.props.displayMain}
+          />
+
+
+

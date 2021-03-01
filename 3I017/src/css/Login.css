@@ -1,0 +1,89 @@
+body {
+font-family: 'Varela Round', sans-serif;
+}
+fieldset {
+padding: 10px;
+margin-bottom: 10px;
+margin-top: 10px;
+border:1px solid #ecf0f1;
+border-radius:4px;	
+}
+.form-login {
+color: #636363;
+width: 350px;
+padding-top: 120px;
+}
+.form-login .modal-content {
+padding: 20px;
+border-radius: 5px;
+border: none;
+}
+.form-login .modal-header {
+border-bottom: none;
+position: relative;
+justify-content: center;
+}
+.form-login h4 {
+text-align: center;
+font-size: 26px;
+}
+.form-login  .form-group {
+position: relative;
+}
+.form-login i {
+position: absolute;
+left: 13px;
+top: 11px;
+font-size: 18px;
+}
+.form-login .form-control {
+padding-left: 40px;
+}
+.form-login .form-control:focus {
+border-color: #00ce81;
+}
+.form-login .form-control, .form-login .btn {
+min-height: 40px;
+border-radius: 3px;
+}
+.form-login .hint-text {
+text-align: center;
+padding-top: 10px;
+}
+.form-login .close {
+position: absolute;
+top: -5px;
+right: -5px;
+}
+.form-login .btn {
+background: #00ce81;
+border: none;
+line-height: normal;
+}
+.form-login .btn:hover, .form-login .btn:focus {
+background: #00bf78;
+}
+.form-login .modal-footer {
+background: #ecf0f1;
+border-color: #dee4e7;
+text-align: center;
+margin: 0 -20px -20px;
+border-radius: 5px;
+font-size: 13px;
+justify-content: center;
+}
+.form-login .modal-footer a {
+color: #999;
+}
+.trigger-btn {
+display: inline-block;
+margin: 100px auto;
+}
+.loginError {
+padding:12px;
+padding-left: 42px;
+vertical-align:middle;
+color: #D8000C;
+background-color: #FFD2D2;
+border-radius: 5px;
+}

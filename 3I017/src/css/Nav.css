@@ -1,0 +1,20 @@
+.navbar {
+  padding-right: 3%;
+}
+.navbar-brand {
+  color: #00ce81!important;
+}
+.search {
+  margin-left: 20px;
+  margin-top:8px;
+}
+.search_bar:focus {
+  border-color: #00ce81;
+}
+.search_button {
+  padding: 1px;
+}
+.badge {
+  font-family: Helvetica;
+}
+

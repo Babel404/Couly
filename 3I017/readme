@@ -1,0 +1,12 @@
+Pierre-Octave VELLY 3682130
+Bastien COUPARD     3407786
+
+  PROJET 3I017 - Site web "COULY"
+  
+"src": le code du projet  
+"couly.sh": script qui installe tout ce qu'il faut dans /tmp/couly (création de l'app, installation des extensions pour React/Node (bootstrap,jquery,local-storage,react-helmet,axios), copie du dossier src, source SQL & Mongo)
+"MongoIO.jar": utilitaire codé par nos soins pour dump ou source une collection Mongo
+"3i017.sql": copie de notre base SQL
+"3i017_mongo.json": copie de notre collection Mongo "comments"
+
+

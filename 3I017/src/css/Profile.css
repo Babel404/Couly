@@ -1,0 +1,17 @@
+.profile-content{
+  background-color: #aadddd;
+}
+      .profile {
+        border: solid 1px gray;
+        border-radius: 3px;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      fieldset {
+        box-sizing: border-box;
+      }
+      profile-left {
+      float: left;
+      margin-left: 20%;
+      }

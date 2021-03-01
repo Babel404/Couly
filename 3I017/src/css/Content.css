@@ -1,0 +1,135 @@
+.messages_panel {
+  height: auto;
+  background-color: #EEEEE0;
+  padding: 20px;
+}
+.listMessages {
+  margin-top: 20px;
+}
+.message {
+  background-color: lime;
+}
+.userPPx {
+  min-height: 100%;
+  background-color: yellow;
+}
+.message_wrapper {}
+.message_body {
+  background-color: aqua;
+}
+.message_footer {
+  background-color: orange;
+}
+
+.tweet {
+  /* background-color: red; */
+  padding-left: 0px;
+  padding-right: 0px;
+  border: solid 1px #E1E4EA;
+  /* border-radius: 5px; (a mettre sur la tweetlist)*/
+}
+.tweet_header {
+  /* background-color: lime; */
+  color: #8E9299;
+  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 1px;
+}
+.tweet_body {
+  /* background-color: aqua; */
+  padding-left: 2px;
+  padding-top: 1px;
+}
+.tweet_footer {
+  /* background-color: magenta; */
+  padding-left: 2px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.tweet strong {
+  color: black;
+}
+.userPP {
+  /* background-color: pink; */
+  display: block;
+  float: left;
+  /* height: 100%;
+  position: absolute;
+  /* right: 0;
+  top: 0; */
+}
+.content {
+  /* background-color: lime; */
+  display: block;
+  position: relative;
+}
+#newMsg {
+  resize: none;
+}
+.userActions {
+  float: right;
+}
+      .follow {
+        border: 1px solid #E1E4EA;
+        padding: 0px;
+        /*background-color: white;*/
+      }
+      .follow-header {
+        padding-top:30px;
+        margin-left: -15px;
+        margin-right: -15px;
+        height: 75px;
+        background-color: aqua; /* default color */
+      }
+      .follow-bar {
+        padding-top: 10px;
+        padding-bottom: 7px;
+        padding-right: 10px;
+        margin-left: -15px;
+        margin-right: -15px;
+        text-align: right;
+      }
+      .follow-button {
+      }
+      .follow-name {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 10px;
+        line-height: 100%;
+      }
+      .follow-body {
+        padding: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      .follow-name strong {
+        font-size: 1.5em;
+      }
+      .follow-name em {
+        color: gray;
+        font-style: normal;
+      }
+      .follow-pp {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+      }
+      .pp {
+        border: solid 5px white;
+      }
+.stats_panel {
+  height: auto;
+}
+.pp {
+margin-left: 15%;
+margin-top: 10px;
+margin-bottom: 10px;
+max-width: 70%;
+height: auto;
+}
+

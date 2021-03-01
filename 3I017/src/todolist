@@ -1,0 +1,27 @@
+MainApp
+  -> Appelle NavigationtPannel
+  
+NavigationPannel
+  -> Appelle Nav (qui va contenir la recherche de profil)
+  -> UserNav (dépend de ce qu'à retourné la recherche
+
+-> content le profile en question, dépend de la recherche
+
+-> profile va gérer uniquement son propre profil
+
+
++ bien sur
+////////////////////////////////////////////////////////////////////////
+//  TODO:
+//-Refaire les sessions avec LS
+//-Corriger le problème avec le login (passer par register)
+//-Revoir la partie serveur
+//-Composants Profil/Paramètres
+//-Mettre l'adresse du serv en variable globale pour les axios
+//-(Prendre une nouvelle version de FontAwesome)
+//
+// En fonction du temps :
+//-Système de notifications
+//-Système de MP
+//
+////////////////////////////////////////////////////////////////////////

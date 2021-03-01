@@ -1,0 +1,58 @@
+.profilNav {
+  background-color:  #FFFFFF;
+  height: 40px;
+}
+.profilNav ul {
+  display: inline;
+  height: 40px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+.profilButtonBar li {
+  display: inline;
+  padding: 10px;
+  font-weight: bold;
+}
+.profilButtonBar li.active{
+  display: inline;
+  padding: 10px;
+  background: #DEDEDE;
+  font-weight: bold;
+  border-top:solid 1px #DEDEDE;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  border-bottom:solid 5px #00ce81;
+}
+.editProfile {
+padding: 5px;
+margin-top: 5px;
+background-color: #00ce81;
+color: white;
+border-radius: 5px;
+border:0 none;
+}
+.editProfile:hover {
+background-color: #00de81;
+}
+.followProfile {
+padding: 5px;
+margin-top: 5px;
+background-color: #74a2ed;
+color: white;
+border-radius: 5px;
+border:0 none;
+}
+.followProfile:hover {
+background-color: #89afed;
+}
+.followedProfile {
+padding: 5px;
+margin-top: 5px;
+background-color: #ede37d;
+color: white;
+border-radius: 5px;
+border:0 none;
+}
+.followedProfile:hover {
+background-color: #ede69e;
+}
